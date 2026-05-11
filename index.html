@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1a1410" />
+  <meta name="description" content="Cafestra — A premium café experience. Crafted coffee, artisan brewing, and elevated moments in the heart of the city." />
+  <meta name="keywords" content="Cafestra, premium café, specialty coffee, artisan coffee, café reservation, espresso, cold brew" />
+  <meta property="og:title" content="Cafestra — Crafted Coffee. Made for Moments." />
+  <meta property="og:description" content="A premium café experience built around craftsmanship, comfort, and sophistication." />
+  <meta property="og:type" content="website" />
+  <title>Cafestra — Crafted Coffee. Made for Moments.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Grain noise overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Loading screen -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-mark">
+        <span class="loader-mark-c">C</span>
+      </div>
+      <div class="loader-text">Cafestra</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand" aria-label="Cafestra home">
+        <span class="brand-mark">C</span>
+        <span class="brand-name">Cafestra</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#reserve">Reserve</a>
+      </nav>
+
+      <a href="#reserve" class="nav-cta">
+        <span>Reserve</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+
+      <button class="nav-burger" id="navBurger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#experience">Experience</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#reserve">Reserve</a>
+    </div>
+  </header>
+
+  <!-- ====== HERO ====== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=1920&h=1080&fit=crop&q=80" alt="Warm café interior with hanging lights" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating steam particles -->
+    <div class="steam" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        Since 2014 · Specialty Coffee House
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line reveal-line"><em>Crafted</em> Coffee.</span>
+        <span class="line reveal-line">Made for <em>Moments.</em></span>
+      </h1>
+
+      <p class="hero-sub reveal">
+        A quiet corner of the city where single-origin beans, slow rituals, and warm light meet — to turn an ordinary morning into something you’ll remember.
+      </p>
+
+      <div class="hero-actions reveal">
+        <a href="#menu" class="btn btn-primary">
+          <span>Explore Menu</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#reserve" class="btn btn-ghost">
+          <span>Reserve a Table</span>
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div class="meta-item reveal">
+          <div class="meta-num" data-count="42">0</div>
+          <div class="meta-label">Origin Beans</div>
+        </div>
+        <div class="meta-item reveal">
+          <div class="meta-num" data-count="12"><span class="prefix">+</span>0</div>
+          <div class="meta-label">Years Brewing</div>
+        </div>
+        <div class="meta-item reveal">
+          <div class="meta-num" data-count="98"><span>0</span><span class="suffix">%</span></div>
+          <div class="meta-label">Return Guests</div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero-scroll" aria-label="Scroll to next section">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ====== MARQUEE ====== -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Single Origin</span><span>·</span>
+      <span>Slow Roasted</span><span>·</span>
+      <span>Hand Poured</span><span>·</span>
+      <span>Estate Sourced</span><span>·</span>
+      <span>Crafted Daily</span><span>·</span>
+      <span>Single Origin</span><span>·</span>
+      <span>Slow Roasted</span><span>·</span>
+      <span>Hand Poured</span><span>·</span>
+      <span>Estate Sourced</span><span>·</span>
+      <span>Crafted Daily</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ====== ABOUT ====== -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <div class="about-image-wrap">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=1400&fit=crop&q=80" alt="Barista pouring espresso" />
+          <div class="about-badge">
+            <div class="badge-num">42</div>
+            <div class="badge-label">Origin<br/>Beans</div>
+          </div>
+          <div class="about-image-bg"></div>
+        </div>
+      </div>
+
+      <div class="about-text">
+        <div class="eyebrow reveal"><span class="dot"></span> Our Story</div>
+        <h2 class="section-title reveal">
+          A quiet ritual,<br/>brewed with <em>intention.</em>
+        </h2>
+        <p class="lead reveal">
+          Cafestra began as a small espresso bar with a single roaster and a single belief — that a cup of coffee, made with care, can shift the rhythm of a day.
+        </p>
+        <p class="reveal">
+          Today we work directly with estates in Ethiopia, Colombia, and Sumatra, roasting in small batches and serving each cup with the same precision we started with. No shortcuts. No noise. Just craft, calm, and a room that feels a little like home.
+        </p>
+
+        <div class="about-features">
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v6m0 8v6M2 12h6m8 0h6M4.93 4.93l4.24 4.24m5.66 5.66l4.24 4.24M4.93 19.07l4.24-4.24m5.66-5.66l4.24-4.24"/></svg>
+            </div>
+            <div>
+              <h4>Direct Trade</h4>
+              <p>Sourced from estates we know by name.</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2v6a6 6 0 0012 0V2M6 22h12M12 14v8"/></svg>
+            </div>
+            <div>
+              <h4>Slow Roasted</h4>
+              <p>Small-batch profiles, daily.</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+            </div>
+            <div>
+              <h4>Warm Spaces</h4>
+              <p>Designed for slow mornings.</p>
+            </div>
+          </div>
+          <div class="feature reveal">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5z M12 12L4 7m8 5l8-5m-8 5v10"/></svg>
+            </div>
+            <div>
+              <h4>Crafted Daily</h4>
+              <p>Pastries baked before sunrise.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== MENU ====== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow reveal"><span class="dot"></span> Signature Menu</div>
+        <h2 class="section-title reveal">A short list,<br/>made <em>perfectly.</em></h2>
+        <p class="section-sub reveal">Six staples we obsess over — each refined over years of tasting, tweaking, and listening.</p>
+      </div>
+
+      <div class="menu-grid">
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?w=800&h=800&fit=crop&q=80" alt="Espresso shot" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">Classic</div>
+            <h3>Espresso</h3>
+            <p>Bright, syrupy, with a soft cocoa finish. Pulled from our signature house blend.</p>
+            <div class="menu-foot">
+              <span class="price">$4.50</span>
+              <button class="menu-add" aria-label="Add Espresso">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=800&h=800&fit=crop&q=80" alt="Cappuccino with latte art" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">Bestseller</div>
+            <h3>Cappuccino</h3>
+            <p>Velvety microfoam over a double shot. Balanced, warm, finished with cocoa.</p>
+            <div class="menu-foot">
+              <span class="price">$5.80</span>
+              <button class="menu-add" aria-label="Add Cappuccino">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=800&h=800&fit=crop&q=80" alt="Cold brew on ice" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">Slow Steeped</div>
+            <h3>Cold Brew</h3>
+            <p>Sixteen-hour steep. Smooth, deep, lightly sweet — served over a single clear cube.</p>
+            <div class="menu-foot">
+              <span class="price">$6.20</span>
+              <button class="menu-add" aria-label="Add Cold Brew">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=800&h=800&fit=crop&q=80" alt="Signature latte with caramel" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">House Signature</div>
+            <h3>Signature Latte</h3>
+            <p>Honeycomb syrup, brown butter, and a whisper of sea salt. Our quiet showstopper.</p>
+            <div class="menu-foot">
+              <span class="price">$7.40</span>
+              <button class="menu-add" aria-label="Add Signature Latte">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&h=800&fit=crop&q=80" alt="Plated dessert" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">Patisserie</div>
+            <h3>Desserts</h3>
+            <p>Tiramisu, basque cheesecake, salted caramel tart — baked in-house, every morning.</p>
+            <div class="menu-foot">
+              <span class="price">from $6.00</span>
+              <button class="menu-add" aria-label="View Desserts">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-card reveal">
+          <div class="menu-img">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=800&h=800&fit=crop&q=80" alt="Breakfast plate" />
+          </div>
+          <div class="menu-body">
+            <div class="menu-tag">All Day</div>
+            <h3>Breakfast Specials</h3>
+            <p>Truffle eggs, sourdough toasts, seasonal granola bowls. Slow food for slow mornings.</p>
+            <div class="menu-foot">
+              <span class="price">from $12.00</span>
+              <button class="menu-add" aria-label="View Breakfast">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="menu-foot-cta reveal">
+        <a href="#" class="btn btn-ghost-dark">
+          <span>View Full Menu</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== EXPERIENCE ====== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow reveal"><span class="dot"></span> The Experience</div>
+        <h2 class="section-title reveal">More than coffee.<br/>A <em>place to land.</em></h2>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-media">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1600&h=900&fit=crop&q=80" alt="Café ambiance" />
+        </div>
+        <div class="exp-text">
+          <div class="exp-num">01</div>
+          <h3>Atmosphere</h3>
+          <p>Soft lamplight, slow music, well-worn oak. A room designed to slow your breath before you’ve sat down.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reverse reveal">
+        <div class="exp-media">
+          <img src="https://images.unsplash.com/photo-1442550528053-c431ecb55509?w=1600&h=900&fit=crop&q=80" alt="Artisan brewing" />
+        </div>
+        <div class="exp-text">
+          <div class="exp-num">02</div>
+          <h3>The Craft</h3>
+          <p>Pour-overs measured to the gram. Espresso pulled to a curve, not a clock. Our baristas train for years — and it shows in the cup.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reveal">
+        <div class="exp-media">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=1600&h=900&fit=crop&q=80" alt="Premium roasted beans" />
+        </div>
+        <div class="exp-text">
+          <div class="exp-num">03</div>
+          <h3>The Beans</h3>
+          <p>Direct-trade, single-origin, micro-lot. Roasted in small batches each Sunday so every bag you take home is just days off the drum.</p>
+        </div>
+      </div>
+
+      <div class="exp-row reverse reveal">
+        <div class="exp-media">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1600&h=900&fit=crop&q=80" alt="Relaxing workspace" />
+        </div>
+        <div class="exp-text">
+          <div class="exp-num">04</div>
+          <h3>The Room</h3>
+          <p>Fast Wi-Fi, quiet corners, deep tables. Whether you’re writing a novel or finishing a deck — there’s a seat for it here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== GALLERY ====== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow reveal"><span class="dot"></span> Inside Cafestra</div>
+        <h2 class="section-title reveal">A look <em>around.</em></h2>
+      </div>
+
+      <div class="masonry">
+        <div class="masonry-item tall reveal">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=1600&fit=crop&q=80" alt="Latte art" />
+          <div class="masonry-cap"><span>Pour</span></div>
+        </div>
+        <div class="masonry-item reveal">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=1200&h=1200&fit=crop&q=80" alt="Café interior" />
+          <div class="masonry-cap"><span>Room</span></div>
+        </div>
+        <div class="masonry-item reveal">
+          <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=1200&h=1200&fit=crop&q=80" alt="Desserts" />
+          <div class="masonry-cap"><span>Pastry</span></div>
+        </div>
+        <div class="masonry-item wide reveal">
+          <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1600&h=1200&fit=crop&q=80" alt="Customer enjoying coffee" />
+          <div class="masonry-cap"><span>Guests</span></div>
+        </div>
+        <div class="masonry-item reveal">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=1200&h=1200&fit=crop&q=80" alt="Coffee beans" />
+          <div class="masonry-cap"><span>Beans</span></div>
+        </div>
+        <div class="masonry-item tall reveal">
+          <img src="https://images.unsplash.com/photo-1442975631115-c4f7b05b6b8a?w=1200&h=1600&fit=crop&q=80" alt="Espresso machine" />
+          <div class="masonry-cap"><span>Bar</span></div>
+        </div>
+        <div class="masonry-item reveal">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1200&h=1200&fit=crop&q=80" alt="Barista at work" />
+          <div class="masonry-cap"><span>Craft</span></div>
+        </div>
+        <div class="masonry-item reveal">
+          <img src="https://images.unsplash.com/photo-1525629053414-cee5cf5d6cba?w=1200&h=1200&fit=crop&q=80" alt="Breakfast plate" />
+          <div class="masonry-cap"><span>Plate</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TESTIMONIALS ====== -->
+  <section class="reviews" id="reviews">
+    <div class="container">
+      <div class="section-head center">
+        <div class="eyebrow reveal"><span class="dot"></span> Kind Words</div>
+        <h2 class="section-title reveal">Loved by the<br/>people who <em>stayed.</em></h2>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review reveal">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">“Easily the best flat white in the city. The room feels like a quiet bookshop — I’ve written half my thesis from the corner table.”</p>
+          <div class="review-author">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&q=80" alt="Amelia R." />
+            <div>
+              <div class="author-name">Amelia R.</div>
+              <div class="author-role">Regular since 2021</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">“The honeycomb latte ruined every other café for me. Service is warm without being intrusive — exactly right.”</p>
+          <div class="review-author">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&q=80" alt="Daniel K." />
+            <div>
+              <div class="author-name">Daniel K.</div>
+              <div class="author-role">Food writer</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review reveal">
+          <div class="stars" aria-label="5 stars">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.27 5.82 22 7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
+          </div>
+          <p class="review-text">“Beautiful interior, exceptional beans, and the breakfast set is genuinely special. A new ritual for our Sundays.”</p>
+          <div class="review-author">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&q=80" alt="Sofia M." />
+            <div>
+              <div class="author-name">Sofia M.</div>
+              <div class="author-role">Interior designer</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== RESERVE / CTA ====== -->
+  <section class="reserve" id="reserve">
+    <div class="reserve-bg">
+      <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?w=1920&h=1080&fit=crop&q=80" alt="" />
+      <div class="reserve-overlay"></div>
+    </div>
+
+    <div class="container reserve-grid">
+      <div class="reserve-info">
+        <div class="eyebrow light reveal"><span class="dot"></span> Reserve a Table</div>
+        <h2 class="section-title light reveal">Save your <em>seat.</em><br/>Stay a while.</h2>
+        <p class="reserve-lead reveal">Best for groups of two or more. Window tables and the back lounge can be requested at booking.</p>
+
+        <div class="reserve-meta">
+          <div class="rm reveal">
+            <div class="rm-label">Hours</div>
+            <div class="rm-value">
+              Mon — Fri · 7:00 – 21:00<br/>
+              Sat — Sun · 8:00 – 22:00
+            </div>
+          </div>
+          <div class="rm reveal">
+            <div class="rm-label">Find Us</div>
+            <div class="rm-value">
+              24 Linden Lane<br/>
+              Old Quarter, City
+            </div>
+          </div>
+          <div class="rm reveal">
+            <div class="rm-label">Contact</div>
+            <div class="rm-value">
+              hello@cafestra.co<br/>
+              +1 (415) 555 — 0142
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <form class="reserve-form reveal" id="reserveForm" novalidate>
+        <h3>Book your table</h3>
+        <div class="form-row">
+          <label>
+            <span>Full name</span>
+            <input type="text" name="name" required placeholder="Jane Doe" />
+          </label>
+        </div>
+        <div class="form-row two">
+          <label>
+            <span>Date</span>
+            <input type="date" name="date" required />
+          </label>
+          <label>
+            <span>Time</span>
+            <input type="time" name="time" required />
+          </label>
+        </div>
+        <div class="form-row two">
+          <label>
+            <span>Guests</span>
+            <select name="guests" required>
+              <option>1 guest</option>
+              <option selected>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5+ guests</option>
+            </select>
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" placeholder="+1 415 ..." />
+          </label>
+        </div>
+        <div class="form-row">
+          <label>
+            <span>Notes (optional)</span>
+            <textarea name="notes" rows="2" placeholder="Anniversary, window seat, dietary requests..."></textarea>
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary full">
+          <span>Confirm Reservation</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="form-note">We’ll confirm by email within an hour during opening times.</p>
+        <div class="form-success" id="formSuccess">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+          <span>Thank you — your table request has been received.</span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="brand">
+          <span class="brand-mark">C</span>
+          <span class="brand-name">Cafestra</span>
+        </a>
+        <p>Crafted coffee. Made for moments. A specialty café in the old quarter — open daily.</p>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><path d="M10 15l5-3-5-3v6z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Explore</h5>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#experience">Experience</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Visit</h5>
+        <p>24 Linden Lane<br/>Old Quarter, City</p>
+        <p>hello@cafestra.co<br/>+1 (415) 555 — 0142</p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Newsletter</h5>
+        <p>Brewing notes, new menu drops, and the occasional poem. No spam.</p>
+        <form class="newsletter" id="newsletterForm" novalidate>
+          <input type="email" placeholder="you@example.com" required aria-label="Email"/>
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </form>
+        <p class="newsletter-msg" id="newsletterMsg"></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <span>© <span id="year"></span> Cafestra. All rights reserved.</span>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
