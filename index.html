@@ -16,6 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
 </head>
 <body>
 
@@ -327,7 +329,7 @@
       </div>
 
       <div class="menu-foot-cta reveal">
-        <a href="#" class="btn btn-ghost-dark">
+        <a href="#menu" class="btn btn-ghost-dark" onclick="alert('Full menu coming soon!'); return false;">
           <span>View Full Menu</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
         </a>
@@ -526,6 +528,9 @@
             <div class="rm-value">
               24 Linden Lane<br/>
               Old Quarter, City
+              <div style="margin-top: 12px; border-radius: 8px; overflow: hidden; height: 120px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555109403!2d-122.50764!3d37.757815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1689201201509!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
             </div>
           </div>
           <div class="rm reveal">
@@ -601,16 +606,16 @@
         </a>
         <p>Crafted coffee. Made for moments. A specialty café in the old quarter — open daily.</p>
         <div class="socials">
-          <a href="#" aria-label="Instagram">
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
-          <a href="#" aria-label="Twitter">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8.5v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
           </a>
-          <a href="#" aria-label="YouTube">
+          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.4 19.6C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-2A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><path d="M10 15l5-3-5-3v6z" fill="currentColor"/></svg>
           </a>
         </div>
@@ -647,9 +652,9 @@
     <div class="footer-bottom container">
       <span>© <span id="year"></span> Cafestra. All rights reserved.</span>
       <div class="footer-legal">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-        <a href="#">Cookies</a>
+        <a href="#home" onclick="alert('Privacy Policy coming soon!'); return false;">Privacy</a>
+        <a href="#home" onclick="alert('Terms of Service coming soon!'); return false;">Terms</a>
+        <a href="#home" onclick="alert('Cookie Policy coming soon!'); return false;">Cookies</a>
       </div>
     </div>
   </footer>
